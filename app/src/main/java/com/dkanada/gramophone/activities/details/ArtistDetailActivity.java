@@ -109,7 +109,13 @@ public class ArtistDetailActivity extends AbsMusicContentActivity implements Pal
     private void setUpViews() {
         setUpSongListView();
         setUpAlbumRecyclerView();
+        setupAboutView(); //TODO: create class function
         setColors(ThemeUtil.getColorResource(this, R.attr.defaultFooterColor));
+    }
+
+    //@TODO: Get the active Artist overview info from Jellyfin
+    private void setupAboutView() {
+
     }
 
     private void setUpSongListView() {

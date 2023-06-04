@@ -19,6 +19,7 @@ public class Artist implements Parcelable {
 
     public String id;
     public String name;
+    public String about;
 
     public String primary;
     public String blurHash;
