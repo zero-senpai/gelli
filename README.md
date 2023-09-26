@@ -1,4 +1,4 @@
-## Gelli
+## Gelli0
 
 This is a native music player for Android devices that connects to Jellyfin media servers. The code is based on a relatively recent version of Phonograph and was made for personal use, but contributions are welcome! Please open an issue to discuss larger changes before submitting a pull request. I am open to an improved icon if any graphic designers have a good suggestion.
 
@@ -22,23 +22,16 @@ Since this was a small project intended mainly for myself, there are some things
 
 * Artist sorting isn't available through the API
 * Playlists and favorites will not update automatically when changed
+* Artist with a , in their name are not foundd in the search results (for example, _Time, The Valuator_, will show up, but as an empty artist object. The only way to find the actual Activity is through searching an album first)
 
-## Future Plans
+## Branch information
 
-If I ever find the time, these are some of the items I would potentially include.
+This is my small hobby for adding functionality and fixes to Gelli as I see fit. I currently use the main app on my moto razr+ to listen to my Jellyfin music library, and I like it a lot, but there coul be much more. I figured it would be a good learning project to dig through the source code and add some features missing from the current master, such as:
 
-* Interface overhaul
-* Offline downloads
-* SyncPlay
-* Smart playlists
-* Session controls
-* QuickConnect
-
-These are features I wouldn't include myself, but I would accept pull requests with good code.
-
-* Support for other media types
-* Chromecast
-* Android Auto
+* Artist Overviews native from Jellyfin's getOverview API
+* Android Media Player tweaks, such as including a favorite button on it
+* Some UI tweaks
+* Some big fixes for things I found (see **Issues**)
 
 ## Screenshots
 
