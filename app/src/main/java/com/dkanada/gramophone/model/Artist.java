@@ -27,6 +27,7 @@ public class Artist implements Parcelable {
     public Artist(BaseItemDto itemDto) {
         this.id = itemDto.getId();
         this.name = itemDto.getName();
+        this.about = itemDto.getOverview();
 
         this.primary = itemDto.getImageTags().containsKey(ImageType.Primary) ? id : null;
         if (itemDto.getImageBlurHashes() != null && itemDto.getImageBlurHashes().get(ImageType.Primary) != null) {
@@ -36,6 +37,10 @@ public class Artist implements Parcelable {
         this.genres = new ArrayList<>();
         this.albums = new ArrayList<>();
         this.songs = new ArrayList<>();
+
+        if (itemDto.getOverview() == null) {
+            about = "No overview available.";
+        }
 
         if (itemDto.getGenreItems() != null) {
             for (GenreDto genre : itemDto.getGenreItems()) {
