@@ -115,6 +115,7 @@ public class ArtistDetailActivity extends AbsMusicContentActivity implements Pal
 
     //@TODO: Get the active Artist overview info from Jellyfin
     private void setupAboutView() {
+        binding.appBarLayout.addOnOffsetChangedListener(this);
 
     }
 
